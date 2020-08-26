@@ -99,7 +99,7 @@ ${DATASET_ROOT}
 ### Valid on COCO val2017 using pretrained models
 
 ```
-python valid.py --cfg experiments/coco/resnet50/256x192_d256x3_adam_lr1e-3.yaml --flip-test --net pairnas --dataset_path "your dataset path"
+python valid.py --cfg experiments/coco/resnet50/256x192_d256x3_adam_lr1e-3.yaml --flip-test --gpu 0 --net pairnas --dataset_path "your dataset path"
 ```
 
 ### Training on COCO train2017
