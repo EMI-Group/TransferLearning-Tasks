@@ -1,0 +1,636 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="f735522c-39db-4647-b39a-df524d391850" name="Default" comment="">
+      <change afterPath="$PROJECT_DIR$/lib/models/backbones/Mnasnet.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/models/backbones/MobileNetV2.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/models/backbones/ShuffleNetV2.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/models/backbones/resnet.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/experiments/coco/resnet101/256x192_d256x3_adam_lr1e-3.yaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/experiments/coco/resnet101/256x192_d256x3_adam_lr1e-3_caffe.yaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/experiments/coco/resnet101/384x288_d256x3_adam_lr1e-3.yaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/experiments/coco/resnet152/256x192_d256x3_adam_lr1e-3.yaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/experiments/coco/resnet152/256x192_d256x3_adam_lr1e-3_caffe.yaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/experiments/coco/resnet152/384x288_d256x3_adam_lr1e-3.yaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/experiments/coco/resnet50/256x192_d256x3_adam_lr1e-3.yaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/experiments/coco/resnet50/256x192_d256x3_adam_lr1e-3_caffe.yaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/experiments/coco/resnet50/384x288_d256x3_adam_lr1e-3.yaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/experiments/mpii/resnet101/256x256_d256x3_adam_lr1e-3.yaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/experiments/mpii/resnet101/384x384_d256x3_adam_lr1e-3.yaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/experiments/mpii/resnet152/256x256_d256x3_adam_lr1e-3.yaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/experiments/mpii/resnet152/384x384_d256x3_adam_lr1e-3.yaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/experiments/mpii/resnet50/256x256_d256x3_adam_lr1e-3.yaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/experiments/mpii/resnet50/384x384_d256x3_adam_lr1e-3.yaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/core/config.py" beforeDir="false" afterPath="$PROJECT_DIR$/lib/core/config.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/core/evaluate.py" beforeDir="false" afterPath="$PROJECT_DIR$/lib/core/evaluate.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/core/function.py" beforeDir="false" afterPath="$PROJECT_DIR$/lib/core/function.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/core/inference.py" beforeDir="false" afterPath="$PROJECT_DIR$/lib/core/inference.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/core/loss.py" beforeDir="false" afterPath="$PROJECT_DIR$/lib/core/loss.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/dataset/JointsDataset.py" beforeDir="false" afterPath="$PROJECT_DIR$/lib/dataset/JointsDataset.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/dataset/coco.py" beforeDir="false" afterPath="$PROJECT_DIR$/lib/dataset/coco.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/dataset/mpii.py" beforeDir="false" afterPath="$PROJECT_DIR$/lib/dataset/mpii.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/models/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/lib/models/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/models/pose_resnet.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/utils/transforms.py" beforeDir="false" afterPath="$PROJECT_DIR$/lib/utils/transforms.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/utils/utils.py" beforeDir="false" afterPath="$PROJECT_DIR$/lib/utils/utils.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/utils/vis.py" beforeDir="false" afterPath="$PROJECT_DIR$/lib/utils/vis.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pose_estimation/_init_paths.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pose_estimation/train.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pose_estimation/valid.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" />
+    </list>
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="TRACKING_ENABLED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CoverageDataManager">
+    <SUITE FILE_PATH="coverage/HumanPose_estimation$rewrite_val_ann.coverage" NAME="rewrite_val_ann Coverage Results" MODIFIED="1594132924747" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/human_pose_estimation_pytorch$Doctests_in_Mnasnet__1_.coverage" NAME="Doctests in Mnasnet (1) Coverage Results" MODIFIED="1587871142638" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/lib/models/backbones" />
+    <SUITE FILE_PATH="coverage/human_pose_estimation_pytorch$Doctests_in_Mnasnet.coverage" NAME="Doctests in Mnasnet Coverage Results" MODIFIED="1587871170569" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/lib/models/backbones" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>size</find>
+      <find>Wri</find>
+      <find>gpu</find>
+      <find>cfg</find>
+      <find>GPU</find>
+      <find>images</find>
+      <find>prediction</find>
+      <find>num_box</find>
+      <find>deconv_layer</find>
+      <find>NUM_DECONV_FILTERS</find>
+      <find>nn.Up</find>
+      <find>TARGET_TYPE</find>
+    </findStrings>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/experiments/mpii_mobilenetv2_256x256_d256x3_adam_lr1e-3.yaml" />
+        <option value="$PROJECT_DIR$/experiments/coco_darts_256x192_d256x3_adam_lr1e-3.yaml" />
+        <option value="$PROJECT_DIR$/lib/models/pose_resnet.py" />
+        <option value="$PROJECT_DIR$/lib/core/evaluate.py" />
+        <option value="$PROJECT_DIR$/lib/core/inference.py" />
+        <option value="$PROJECT_DIR$/lib/utils/vis.py" />
+        <option value="$PROJECT_DIR$/experiments/mpii_darts_256x256_d256x3_adam_lr1e-3.yaml" />
+        <option value="$PROJECT_DIR$/lib/core/config.py" />
+        <option value="$PROJECT_DIR$/experiments/mpii_resnet50_256x256_d256x3_adam_lr1e-3.yaml" />
+        <option value="$PROJECT_DIR$/experiments/coco_resnet50_256x192_d256x3_adam_lr1e-3.yaml" />
+        <option value="$PROJECT_DIR$/experiments/mpii_nasnet_256x256_d256x3_adam_lr1e-3.yaml" />
+        <option value="$PROJECT_DIR$/lib/models/backbones/mobilenet/mobilenet.py" />
+        <option value="$PROJECT_DIR$/lib/models/backbones/ShuffleNetV2.py" />
+        <option value="$PROJECT_DIR$/lib/models/backbones/Mnasnet.py" />
+        <option value="$PROJECT_DIR$/lib/models/backbones/MobileNetV2.py" />
+        <option value="$PROJECT_DIR$/lib/models/backbones/NASNet/network.py" />
+        <option value="$PROJECT_DIR$/lib/models/backbones/resnet.py" />
+        <option value="$PROJECT_DIR$/lib/models/backbones/DARTS/darts.py" />
+        <option value="$PROJECT_DIR$/lib/models/backbones/NASNet/nasnet.py" />
+        <option value="$PROJECT_DIR$/lib/models/backbones/DARTS/csonas.py" />
+        <option value="$PROJECT_DIR$/lib/utils/utils.py" />
+        <option value="$PROJECT_DIR$/lib/utils/multadds_count.py" />
+        <option value="$PROJECT_DIR$/lib/models/backbones/DARTS/networks.py" />
+        <option value="$PROJECT_DIR$/experiments/mpii_256x256_d256x3_adam_lr1e-3.yaml" />
+        <option value="$PROJECT_DIR$/lib/dataset/mpii.py" />
+        <option value="$PROJECT_DIR$/lib/dataset/coco.py" />
+        <option value="$PROJECT_DIR$/lib/dataset/JointsDataset.py" />
+        <option value="$PROJECT_DIR$/experiments/coco_256x192_d256x3_adam_lr1e-3.yaml" />
+        <option value="$PROJECT_DIR$/1.py" />
+        <option value="$PROJECT_DIR$/lib/core/function.py" />
+        <option value="$PROJECT_DIR$/lib/models/posenet_v0.py" />
+        <option value="$PROJECT_DIR$/lib/models/posenet_v1.py" />
+        <option value="$PROJECT_DIR$/Visualization.py" />
+        <option value="$PROJECT_DIR$/rewrite_val_ann.py" />
+        <option value="$PROJECT_DIR$/visual_results.py" />
+        <option value="$PROJECT_DIR$/visual_ori.py" />
+        <option value="$PROJECT_DIR$/rm_rf.py" />
+        <option value="$PROJECT_DIR$/visual_results_compose.py" />
+        <option value="$PROJECT_DIR$/lib/models/posenet_align.py" />
+        <option value="$PROJECT_DIR$/lib/models/posnet_align_v1.py" />
+        <option value="$PROJECT_DIR$/experiments/coco_384x288_d256x3_adam_lr1e-3.yaml" />
+        <option value="$PROJECT_DIR$/lib/models/backbones/ResNet.py" />
+        <option value="$PROJECT_DIR$/lib/models/backbones/hrposenet.py" />
+        <option value="$PROJECT_DIR$/lib/models/hrposenet.py" />
+        <option value="$PROJECT_DIR$/experiments/hrnet_mpii_256x256_d256x3_adam_lr1e-3.yaml" />
+        <option value="$PROJECT_DIR$/lib/models/posenet.py" />
+        <option value="$PROJECT_DIR$/lib/models/backbones/__init__.py" />
+        <option value="$PROJECT_DIR$/lib/models/backbones/DARTS/genotypes.py" />
+        <option value="$PROJECT_DIR$/valid.py" />
+        <option value="$PROJECT_DIR$/lib/models/__init__.py" />
+        <option value="$PROJECT_DIR$/train.py" />
+      </list>
+    </option>
+  </component>
+  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+    <sorting>DEFINITION_ORDER</sorting>
+  </component>
+  <component name="NodePackageJsonFileManager">
+    <packageJsonPaths />
+  </component>
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="-12" />
+    <option name="y" value="-12" />
+    <option name="width" value="3864" />
+    <option name="height" value="2124" />
+  </component>
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="Simplebaseline" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Simplebaseline" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Simplebaseline" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Simplebaseline" type="462c0819:PsiDirectoryNode" />
+              <item name="lib" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="Scope" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="settings.editor.selected.configurable" value="configurable.group.editor" />
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager" selected="Python.rewrite_val_ann">
+    <configuration name="rewrite_val_ann" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="human-pose-estimation.pytorch" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/rewrite_val_ann.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+    </configuration>
+    <configuration name="Doctests in Mnasnet (1)" type="tests" factoryName="Doctests" temporary="true" nameIsGenerated="true">
+      <module name="human-pose-estimation.pytorch" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/lib/models/backbones" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/lib/models/backbones/Mnasnet.py" />
+      <option name="CLASS_NAME" value="" />
+      <option name="METHOD_NAME" value="" />
+      <option name="FOLDER_NAME" value="" />
+      <option name="TEST_TYPE" value="TEST_SCRIPT" />
+      <option name="PATTERN" value="" />
+      <option name="USE_PATTERN" value="false" />
+    </configuration>
+    <configuration name="Doctests in Mnasnet" type="tests" factoryName="Doctests" temporary="true" nameIsGenerated="true">
+      <module name="human-pose-estimation.pytorch" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/lib/models/backbones" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/lib/models/backbones/Mnasnet.py" />
+      <option name="CLASS_NAME" value="" />
+      <option name="METHOD_NAME" value="" />
+      <option name="FOLDER_NAME" value="" />
+      <option name="TEST_TYPE" value="TEST_SCRIPT" />
+      <option name="PATTERN" value="" />
+      <option name="USE_PATTERN" value="false" />
+    </configuration>
+    <list>
+      <item itemvalue="Python tests.Doctests in Mnasnet" />
+      <item itemvalue="Python tests.Doctests in Mnasnet (1)" />
+      <item itemvalue="Python.rewrite_val_ann" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Python.rewrite_val_ann" />
+        <item itemvalue="Python tests.Doctests in Mnasnet" />
+        <item itemvalue="Python tests.Doctests in Mnasnet (1)" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="f735522c-39db-4647-b39a-df524d391850" name="Default" comment="" />
+      <created>1587693063345</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1587693063345</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="TestHistory">
+    <history-entry file="Doctests_in_Mnasnet - 2020.04.26 at 11h 18m 47s.xml">
+      <configuration name="Doctests in Mnasnet" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Doctests_in_Mnasnet - 2020.04.26 at 11h 18m 55s.xml">
+      <configuration name="Doctests in Mnasnet" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Doctests_in_Mnasnet_(1) - 2020.04.26 at 11h 19m 16s.xml">
+      <configuration name="Doctests in Mnasnet (1)" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Doctests_in_Mnasnet - 2020.04.26 at 11h 19m 45s.xml">
+      <configuration name="Doctests in Mnasnet" configurationId="tests" />
+    </history-entry>
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-7" y="-7" width="2575" height="1415" extended-state="6" />
+    <layout>
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
+      <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.27336448" />
+      <window_info anchor="bottom" id="Version Control" order="7" />
+      <window_info anchor="bottom" id="Python Console" order="7" weight="0.32943925" />
+      <window_info anchor="bottom" id="Terminal" order="7" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.086213745" />
+      <window_info anchor="bottom" id="Statistic" order="7" />
+      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
+      <window_info anchor="right" id="Database" order="3" />
+      <window_info anchor="right" id="SciView" order="3" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.1530782" />
+      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Find" order="1" />
+    </layout>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <option name="time" value="3" />
+    </breakpoint-manager>
+  </component>
+  <component name="debuggerHistoryManager">
+    <expressions id="evaluateCodeFragment">
+      <expression>
+        <expression-string>obj_ann</expression-string>
+        <language-id>Python</language-id>
+        <evaluation-mode>CODE_FRAGMENT</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>obj_det</expression-string>
+        <language-id>Python</language-id>
+        <evaluation-mode>CODE_FRAGMENT</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>obj_ann['annotations'][1]</expression-string>
+        <language-id>Python</language-id>
+        <evaluation-mode>CODE_FRAGMENT</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>obj_ann['annotations']</expression-string>
+        <language-id>Python</language-id>
+        <evaluation-mode>CODE_FRAGMENT</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>obj</expression-string>
+        <language-id>Python</language-id>
+        <evaluation-mode>CODE_FRAGMENT</evaluation-mode>
+      </expression>
+    </expressions>
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/experiments/coco_resnet50_256x192_d256x3_adam_lr1e-3.yaml" />
+    <entry file="file://$PROJECT_DIR$/lib/models/backbones/mobilenet/mobilenetv2.py" />
+    <entry file="file://$PROJECT_DIR$/lib/models/backbones/mobilenet/mobilenet.py" />
+    <entry file="file://$PROJECT_DIR$/lib/models/backbones/mobilenet/mobilenetv1.py" />
+    <entry file="file://$PROJECT_DIR$/lib/models/backbones/DARTS/pdarts.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="6" column="16" selection-start-line="6" selection-start-column="16" selection-end-line="6" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/models/backbones/MobileNetV2.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1861">
+          <caret line="145" column="37" lean-forward="true" selection-start-line="145" selection-start-column="37" selection-end-line="145" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/models/backbones/NASNet/nasnet.py" />
+    <entry file="file://$PROJECT_DIR$/lib/models/backbones/DARTS/darts.py" />
+    <entry file="file://$PROJECT_DIR$/lib/models/backbones/DARTS/csonas.py" />
+    <entry file="file://$PROJECT_DIR$/lib/models/backbones/NASNet/network.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="631">
+          <caret line="563" selection-start-line="563" selection-end-line="563" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/utils/multadds_count.py" />
+    <entry file="file://$PROJECT_DIR$/experiments/coco_nasnet_256x192_d256x3_adam_lr1e-3.yaml" />
+    <entry file="file://$PROJECT_DIR$/_init_paths.py" />
+    <entry file="file://$PROJECT_DIR$/lib/models/backbones/Mnasnet.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="925">
+          <caret line="155" selection-start-line="155" selection-end-line="160" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/models/backbones/ShuffleNetV2.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1590">
+          <caret line="54" column="9" selection-start-line="54" selection-start-column="9" selection-end-line="54" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/core/inference.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="720">
+          <caret line="24" selection-start-line="24" selection-end-line="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/dataset/mpii.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1471">
+          <caret line="54" column="39" lean-forward="true" selection-start-line="54" selection-start-column="39" selection-end-line="54" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/1.py" />
+    <entry file="file://$PROJECT_DIR$/lib/core/loss.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="570">
+          <caret line="19" column="25" selection-start-line="19" selection-start-column="25" selection-end-line="19" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/models/posenet_v0.py" />
+    <entry file="file://$PROJECT_DIR$/lib/models/backbones/DARTS/networks.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="751">
+          <caret line="115" column="20" lean-forward="true" selection-start-line="115" selection-start-column="20" selection-end-line="115" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/dataset/JointsDataset.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="511">
+          <caret line="86" selection-start-line="86" selection-end-line="86" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/utils/transforms.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1171">
+          <caret line="67" column="44" selection-start-line="67" selection-start-column="44" selection-end-line="67" selection-end-column="44" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/dataset/coco.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1499">
+          <caret line="59" column="36" selection-start-line="59" selection-start-column="36" selection-end-line="59" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Visualization.py" />
+    <entry file="file://$PROJECT_DIR$/rm_rf.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="510">
+          <caret line="17" column="24" lean-forward="true" selection-start-line="17" selection-start-column="24" selection-end-line="17" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/visual_ori.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="293">
+          <caret line="201" column="42" lean-forward="true" selection-start-line="201" selection-start-column="42" selection-end-line="201" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/visual_results_compose.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="840">
+          <caret line="28" selection-start-line="28" selection-end-line="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/models/posenet_v1.py" />
+    <entry file="file://$PROJECT_DIR$/experiments/coco_256x192_d256x3_adam_lr1e-3.yaml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="870">
+          <caret line="35" column="22" selection-start-line="35" selection-start-column="4" selection-end-line="35" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/experiments/coco_384x288_d256x3_adam_lr1e-3.yaml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="61">
+          <caret line="43" column="16" selection-start-line="43" selection-start-column="16" selection-end-line="43" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/models/posnet_align_v1.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="460">
+          <caret line="94" column="32" lean-forward="true" selection-start-line="94" selection-start-column="32" selection-end-line="94" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/models/backbones/ResNet.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="931">
+          <caret line="217" selection-start-line="217" selection-end-line="219" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/models/backbones/hrposenet.py" />
+    <entry file="file://$PROJECT_DIR$/lib/core/config.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1680">
+          <caret line="115" column="28" lean-forward="true" selection-start-line="115" selection-start-column="28" selection-end-line="115" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/experiments/mpii_256x256_d256x3_adam_lr1e-3.yaml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="3" column="14" lean-forward="true" selection-start-line="3" selection-start-column="14" selection-end-line="3" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/utils/utils.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1500">
+          <caret line="50" column="18" selection-start-line="50" selection-start-column="18" selection-end-line="50" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/models/hrposenet.py" />
+    <entry file="file://$PROJECT_DIR$/lib/models/hrposenet_align.py" />
+    <entry file="file://$PROJECT_DIR$/lib/core/function.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="990">
+          <caret line="93" selection-start-line="93" selection-end-line="94" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/core/evaluate.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1200">
+          <caret line="40" column="52" selection-start-line="40" selection-start-column="49" selection-end-line="40" selection-end-column="52" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/experiments/hrnet_mpii_256x256_d256x3_adam_lr1e-3.yaml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="1" column="6" selection-start-line="1" selection-start-column="6" selection-end-line="1" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/rewrite_val_ann.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="6" column="8" selection-start-line="6" selection-start-column="8" selection-end-line="6" selection-end-column="8" />
+          <folding>
+            <element signature="e#0#11#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/models/posenet_align.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
+          <folding>
+            <element signature="e#270#308#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/models/backbones/DARTS/genotypes.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="721">
+          <caret line="189" column="7" selection-start-line="189" selection-start-column="7" selection-end-line="189" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/models/posenet.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-569">
+          <caret line="17" column="30" selection-start-line="17" selection-start-column="30" selection-end-line="17" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/models/backbones/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="11" column="45" selection-start-line="11" selection-start-column="45" selection-end-line="11" selection-end-column="45" />
+          <folding>
+            <element signature="e#0#9#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/visual_results.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1200">
+          <caret line="100" column="62" selection-start-line="100" selection-start-column="62" selection-end-line="100" selection-end-column="62" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/models/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="10" column="30" selection-start-line="10" selection-start-column="30" selection-end-line="10" selection-end-column="30" />
+          <folding>
+            <element signature="e#270#308#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/valid.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3241">
+          <caret line="127" lean-forward="true" selection-start-line="127" selection-end-line="127" />
+          <folding>
+            <element signature="e#305#343#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/train.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="630">
+          <caret line="41" column="80" selection-start-line="41" selection-start-column="80" selection-end-line="41" selection-end-column="80" />
+          <folding>
+            <element signature="e#0#38#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>
