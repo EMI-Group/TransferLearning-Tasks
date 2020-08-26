@@ -38,7 +38,7 @@ ${DATASET_ROOT}
 
 
 ## Evaluation
-1. Download PASCAL VOC pretrained models from [GoogleDrive](https://drive.google.com/drive/folders/13_wJ6nC7my1KKouMkQMqyr9r1ZnLnukP?usp=sharing). Please download them under ${SSDLite_ROOT}/output, and make them look like this:
+1. Download PASCAL VOC pretrained models from [GoogleDrive](https://drive.google.com/drive/folders/1Jr2JjXYFG2LOg49rWdcx5Us0UWFWLCwX?usp=sharing). Please download them under ${SSDLite_ROOT}/output, and make them look like this:
 
    ```
    ${SSDLite_ROOT}
