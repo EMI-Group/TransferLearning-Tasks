@@ -1,14 +1,14 @@
 # Single Shot MultiBox Detector Implementation in Pytorch
 
-This repo implements [SSD (Single Shot MultiBox Detector)](https://arxiv.org/abs/1512.02325). The implementation is heavily influenced by the projects [ssd.pytorch](https://github.com/amdegroot/ssd.pytorch) and [Detectron](https://github.com/facebookresearch/Detectron).
+This repo implements [SSD (Single Shot MultiBox Detector)](https://arxiv.org/abs/1512.02325). The implementation is heavily influenced by the projects [pytorch-ssd](https://github.com/qfgaohao/pytorch-ssd).
 The design goal is modularity and extensibility.
 
-Currently, it has MobileNetV1, MobileNetV2, and VGG based SSD/SSD-Lite implementations.
+Currently, it has MobileNetV2, ShuffleNetV2, NASNet, Mnasnet, DARTS, PairNAS based on SSD-Lite implementations.
 
 ## Dependencies
 1. Python 3.6+
 2. OpenCV
-3. Pytorch 1.0 or Pytorch 0.4+
+3. Pytorch 1.0
 4. Caffe2
 5. Pandas
 6. Boto3 if you want to train models on the Google OpenImages Dataset.
