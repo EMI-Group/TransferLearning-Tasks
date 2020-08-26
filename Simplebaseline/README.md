@@ -19,8 +19,8 @@ The code is developed using python 3.6 on Ubuntu 16.04. NVIDIA GPUs are needed.
    ```
    pip install pycocotools
    ```
-3. Download pytorch imagenet pretrained models from [pytorch model zoo](https://pytorch.org/docs/stable/model_zoo.html#module-torch.utils.model_zoo).
-4. Download coco pretrained models from [OneDrive](https://1drv.ms/f/s!AhIXJn_J-blW0D5ZE4ArK9wk_fvw) or [GoogleDrive](https://drive.google.com/drive/folders/13_wJ6nC7my1KKouMkQMqyr9r1ZnLnukP?usp=sharing). Please download them under ${POSE_ROOT}/models/pytorch, and make them look like this:
+3. Download pytorch imagenet pretrained models from [ImageNet model zoo](https://drive.google.com/drive/folders/1mbaYnvpOxLZRbeXCrXwlul657cXEveT0?usp=sharing).
+4. Download coco pretrained models from [GoogleDrive](https://drive.google.com/drive/folders/1Syb1GttHMWhPQRSnXxXcNNSP4RSFnp9_?usp=sharing). Please download them under ${POSE_ROOT}/output, and make them look like this:
 
    ```
    ${POSE_ROOT}
@@ -73,7 +73,7 @@ The code is developed using python 3.6 on Ubuntu 16.04. NVIDIA GPUs are needed.
 
 ### Data preparation
 
-**For COCO data**, please download from [COCO download](http://cocodataset.org/#download), 2017 Train/Val is needed for COCO keypoints training and validation. We also provide person detection result of COCO val2017 to reproduce our multi-person pose estimation results. Please download from [OneDrive](https://1drv.ms/f/s!AhIXJn_J-blWzzDXoz5BeFl8sWM-) or [GoogleDrive](https://drive.google.com/drive/folders/1fRUDNUDxe9fjqcRZ2bnF_TKMlO0nB_dk?usp=sharing).
+**For COCO data**, please download from [COCO download](http://cocodataset.org/#download), 2017 Train/Val is needed for COCO keypoints training and validation. We also provide person detection result of COCO val2017 to reproduce our multi-person pose estimation results. Please download from [OneDrive](https://1drv.ms/f/s!AhIXJn_J-blWzzDXoz5BeFl8sWM-) or [GoogleDrive](https://drive.google.com/drive/folders/1Syb1GttHMWhPQRSnXxXcNNSP4RSFnp9_?usp=sharing).
 Download and extract them under {POSE_ROOT}/data, and make them look like this:
 ```
 ${DATASET_ROOT}
@@ -99,17 +99,13 @@ ${DATASET_ROOT}
 ### Valid on COCO val2017 using pretrained models
 
 ```
-python pose_estimation/valid.py \
-    --cfg experiments/coco/resnet50/256x192_d256x3_adam_lr1e-3.yaml \
-    --flip-test \
-    --model-file models/pytorch/pose_coco/pose_resnet_50_256x192.pth.tar
+python valid.py --cfg experiments/coco/resnet50/256x192_d256x3_adam_lr1e-3.yaml --flip-test --net pairnas --dataset_path "your dataset path"
 ```
 
 ### Training on COCO train2017
 
 ```
-python pose_estimation/train.py \
-    --cfg experiments/coco/resnet50/256x192_d256x3_adam_lr1e-3.yaml
+python train.py --cfg experiments/coco/resnet50/256x192_d256x3_adam_lr1e-3.yaml --net pairnas --gpu 0 --dataset_path "your dataset path" 
 ```
 
 ### Citation
