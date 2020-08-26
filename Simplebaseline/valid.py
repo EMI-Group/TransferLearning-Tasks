@@ -45,7 +45,6 @@ def parse_args():
     # update config
     update_config(args.cfg)
     # training
-    parser.add_argument('--model_file', help='model state file', type=str)
     parser.add_argument('--workers', help='num of dataloader workers', type=int, default=16)
     parser.add_argument('--frequent', help='frequency of logging', default=config.PRINT_FREQ, type=int)
     parser.add_argument('--use-detect-bbox', help='use detect bbox', action='store_true')
