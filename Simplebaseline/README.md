@@ -11,12 +11,12 @@ The code is developed using python 3.6 on Ubuntu 16.04. NVIDIA GPUs are needed.
 1. Install pytorch >= v1.0.0 following [official instruction](https://pytorch.org/).
 2. Clone this repo, and we'll call the directory that you cloned as ${POSE_ROOT}.
 3. Make libs:
-   ```
+   ```bash
    cd ${POSE_ROOT}/lib
    make
    ```
 3. Install [COCOAPI](https://github.com/cocodataset/cocoapi):
-   ```
+   ```bash
    pip install pycocotools
    ```
 3. Download pytorch imagenet pretrained models from [ImageNet model zoo](https://drive.google.com/drive/folders/1mbaYnvpOxLZRbeXCrXwlul657cXEveT0?usp=sharing).
@@ -74,11 +74,11 @@ The code is developed using python 3.6 on Ubuntu 16.04. NVIDIA GPUs are needed.
 ### Data preparation
 
 **For COCO data**, please download from [COCO download](http://cocodataset.org/#download), 2017 Train/Val is needed for COCO keypoints training and validation. We also provide person detection result of COCO val2017 to reproduce our multi-person pose estimation results. Please download from [OneDrive](https://1drv.ms/f/s!AhIXJn_J-blWzzDXoz5BeFl8sWM-) or [GoogleDrive](https://drive.google.com/drive/folders/1Syb1GttHMWhPQRSnXxXcNNSP4RSFnp9_?usp=sharing).
-Download and extract them under {POSE_ROOT}/data, and make them look like this:
+Download and extract them under {DATASET_ROOT}/MSCOCO2017, and make them look like this:
 ```
 ${DATASET_ROOT}
 |-- MSCOCO2017
-  |-- |-- annotations
+  |-- annotations
       |   |-- person_keypoints_train2017.json
       |   `-- person_keypoints_val2017.json
       |-- person_detection_results
@@ -98,23 +98,12 @@ ${DATASET_ROOT}
 
 ### Valid on COCO val2017 using pretrained models
 
-```
+```bash
 python valid.py --cfg experiments/coco/resnet50/256x192_d256x3_adam_lr1e-3.yaml --flip-test --gpu 0 --net pairnas --dataset_path "your dataset path"
 ```
 
 ### Training on COCO train2017
 
-```
-python train.py --cfg experiments/coco/resnet50/256x192_d256x3_adam_lr1e-3.yaml --net pairnas --gpu 0 --dataset_path "your dataset path" 
-```
-
-### Citation
-If you use this code or models in your research, please cite with:
-```
-@inproceedings{xiao2018simple,
-    author={Xiao, Bin and Wu, Haiping and Wei, Yichen},
-    title={Simple Baselines for Human Pose Estimation and Tracking},
-    booktitle = {European Conference on Computer Vision (ECCV)},
-    year = {2018}
-}
+```bash
+python train.py --cfg experiments/coco/resnet50/256x192_d256x3_adam_lr1e-3.yaml --net pairnas --gpu 0 --dataset_path "your dataset path"
 ```
