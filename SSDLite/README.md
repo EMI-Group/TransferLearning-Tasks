@@ -64,7 +64,7 @@ python valid.py --net pairnas --gpu 0 --eval_epoch 199 --dataset_path "your data
 ```
 
 ## Training
-1. Download pytorch imagenet pretrained models from [pytorch model zoo](https://pytorch.org/docs/stable/model_zoo.html#module-torch.utils.model_zoo), and put them under ${SSDLite_ROOT}/pretrained_models.
+1. Download pytorch imagenet pretrained models from [ImageNet model zoo](https://drive.google.com/drive/folders/1mbaYnvpOxLZRbeXCrXwlul657cXEveT0?usp=sharing), and put them under ${SSDLite_ROOT}/pretrained_models.
 2. The code to re-produce the model:
 
 ```bash
