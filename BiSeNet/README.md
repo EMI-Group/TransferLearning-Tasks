@@ -32,7 +32,7 @@ ${DATASET_ROOT}
 
 
 ## Evaluation
-1. Download Cityscapes pretrained models from [GoogleDrive](https://drive.google.com/drive/folders/1Jr2JjXYFG2LOg49rWdcx5Us0UWFWLCwX?usp=sharing). Please download them under ${SSDLite_ROOT}/output, and make them look like this:
+1. Download Cityscapes pretrained models from [GoogleDrive](https://drive.google.com/drive/folders/1Jr2JjXYFG2LOg49rWdcx5Us0UWFWLCwX?usp=sharing). Please download them under ${BiSeNet_ROOT}/output, and make them look like this:
 
    ```
    ${BiSeNet_ROOT}
