@@ -7,11 +7,7 @@ Currently, it has MobileNetV2, ShuffleNetV2, NASNet, Mnasnet, DARTS, PairNAS bas
 
 ## Dependencies
 1. Python 3.6+
-2. OpenCV
-3. Pytorch 1.0
-4. Caffe2
-5. Pandas
-6. Boto3 if you want to train models on the Google OpenImages Dataset.
+2. Pytorch 1.0
 
 ## Data preparation
 **For PASCAL VOC data**, please download from [YOLO dataset download](https://pjreddie.com/projects/pascal-voc-dataset-mirror/). Download and extract them under {DATASET_ROOT}/MSCOCO2017, and make them look like this:
