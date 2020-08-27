@@ -52,7 +52,7 @@ ${DATASET_ROOT}
    ```
 
 ```bash
-python valid.py --net pairnas --gpu 0 --bs 5 --ms no (if used "yes") --dataset_path "your dataset path"
+CUDA_VISIBLE_DEVICES=0 python valid.py --net pairnas --bs 5 --ms no (if used "yes") --dataset_path "your dataset path"
 ```
 
 ## Training
